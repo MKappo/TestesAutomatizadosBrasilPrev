@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.124 s <<< FAILURE! - in runner.TestRunner
+runner.TestRunner.runScenario["Buscar um cliente existente", "Optional[Buscar Clientes]"](1)  Time elapsed: 2.377 s  <<< FAILURE!
+java.lang.NullPointerException
+
+runner.TestRunner.runScenario["Confirmar que o HTTP StatusCode de uma pesquisa está correto", "Optional[Buscar Clientes]"](2)  Time elapsed: 0.183 s  <<< FAILURE!
+java.lang.AssertionError: expected:<200> but was:<404>
+

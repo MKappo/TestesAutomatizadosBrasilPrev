@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runner.TestRunner" time="4.124" tests="3" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="cucumber.filter.tags@SmokeTesting" value="true"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/test-classes:/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/classes:/home/mkapobianco/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy/3.0.7/groovy-3.0.7.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.7/groovy-xml-3.0.7.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/mkapobianco/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/mkapobianco/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/mkapobianco/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/mkapobianco/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/mkapobianco/.m2/repository/io/rest-assured/json-path/4.3.3/json-path-4.3.3.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy-json/3.0.7/groovy-json-3.0.7.jar:/home/mkapobianco/.m2/repository/io/rest-assured/rest-assured-common/4.3.3/rest-assured-common-4.3.3.jar:/home/mkapobianco/.m2/repository/io/rest-assured/xml-path/4.3.3/xml-path-4.3.3.jar:/home/mkapobianco/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/mkapobianco/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/mkapobianco/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/mkapobianco/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/home/mkapobianco/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/mkapobianco/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-java/6.10.0/cucumber-java-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-core/6.10.0/cucumber-core-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-gherkin/6.10.0/cucumber-gherkin-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.0/cucumber-gherkin-messages-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/messages/14.0.1/messages-14.0.1.jar:/home/mkapobianco/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-plugin/6.10.0/cucumber-plugin-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/docstring/6.10.0/docstring-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/html-formatter/12.0.0/html-formatter-12.0.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/create-meta/3.0.0/create-meta-3.0.0.jar:/home/mkapobianco/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-junit/6.10.0/cucumber-junit-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-testng/6.10.0/cucumber-testng-6.10.0.jar:/home/mkapobianco/.m2/repository/org/testng/testng/7.3.0/testng-7.3.0.jar:/home/mkapobianco/.m2/repository/com/beust/jcommander/1.78/jcommander-1.78.jar:/home/mkapobianco/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar:/home/mkapobianco/.m2/repository/org/apache/ant/ant-launcher/1.10.3/ant-launcher-1.10.3.jar:/home/mkapobianco/.m2/repository/com/google/inject/guice/4.2.2/guice-4.2.2-no_aop.jar:/home/mkapobianco/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/mkapobianco/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/home/mkapobianco/.m2/repository/com/google/guava/guava/25.1-android/guava-25.1-android.jar:/home/mkapobianco/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/mkapobianco/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/mkapobianco/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/mkapobianco/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/mkapobianco/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/mkapobianco/.m2/repository/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-picocontainer/6.10.0/cucumber-picocontainer-6.10.0.jar:/home/mkapobianco/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/surefire/surefirebooter7406137751404936150.jar /home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/surefire 2021-02-16T10-58-49_700-jvmRun1 surefire1894022460380721943tmp surefire_03869611167508183771tmp"/>
+    <property name="surefire.test.class.path" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/test-classes:/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/classes:/home/mkapobianco/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy/3.0.7/groovy-3.0.7.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.7/groovy-xml-3.0.7.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/mkapobianco/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/mkapobianco/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/mkapobianco/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/mkapobianco/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/mkapobianco/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/mkapobianco/.m2/repository/io/rest-assured/json-path/4.3.3/json-path-4.3.3.jar:/home/mkapobianco/.m2/repository/org/codehaus/groovy/groovy-json/3.0.7/groovy-json-3.0.7.jar:/home/mkapobianco/.m2/repository/io/rest-assured/rest-assured-common/4.3.3/rest-assured-common-4.3.3.jar:/home/mkapobianco/.m2/repository/io/rest-assured/xml-path/4.3.3/xml-path-4.3.3.jar:/home/mkapobianco/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/mkapobianco/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/mkapobianco/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/mkapobianco/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/home/mkapobianco/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/mkapobianco/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-java/6.10.0/cucumber-java-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-core/6.10.0/cucumber-core-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-gherkin/6.10.0/cucumber-gherkin-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.0/cucumber-gherkin-messages-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/messages/14.0.1/messages-14.0.1.jar:/home/mkapobianco/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-plugin/6.10.0/cucumber-plugin-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/docstring/6.10.0/docstring-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/html-formatter/12.0.0/html-formatter-12.0.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/create-meta/3.0.0/create-meta-3.0.0.jar:/home/mkapobianco/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-junit/6.10.0/cucumber-junit-6.10.0.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-testng/6.10.0/cucumber-testng-6.10.0.jar:/home/mkapobianco/.m2/repository/org/testng/testng/7.3.0/testng-7.3.0.jar:/home/mkapobianco/.m2/repository/com/beust/jcommander/1.78/jcommander-1.78.jar:/home/mkapobianco/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar:/home/mkapobianco/.m2/repository/org/apache/ant/ant-launcher/1.10.3/ant-launcher-1.10.3.jar:/home/mkapobianco/.m2/repository/com/google/inject/guice/4.2.2/guice-4.2.2-no_aop.jar:/home/mkapobianco/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/mkapobianco/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/home/mkapobianco/.m2/repository/com/google/guava/guava/25.1-android/guava-25.1-android.jar:/home/mkapobianco/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/mkapobianco/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/mkapobianco/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/mkapobianco/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/mkapobianco/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/mkapobianco/.m2/repository/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar:/home/mkapobianco/.m2/repository/io/cucumber/cucumber-picocontainer/6.10.0/cucumber-picocontainer-6.10.0.jar:/home/mkapobianco/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/mkapobianco"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="basedir" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/target/surefire/surefirebooter7406137751404936150.jar"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_282-8u282-b08-0ubuntu1~20.04-b08"/>
+    <property name="user.name" value="mkapobianco"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.4.0-65-generic"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/mkapobianco/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_282"/>
+    <property name="user.dir" value="/home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.version" value="25.282-b08"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Buscar um cliente existente&quot;, &quot;Optional[Buscar Clientes]&quot;](1)" classname="runner.TestRunner" time="2.377">
+    <failure type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException
+]]></failure>
+    <system-out><![CDATA[
+@FullTesting @SmokeTesting
+Scenario: Buscar um cliente existente                                                     # src/test/java/features/BuscarClientes.feature:5
+  Given Eu tenha acesso ao endpoint /pessoas                                              # steps.StepDefinitions.setUp(java.lang.String)
+  When Eu fizer uma pesquisa usando metodo GET informando DDD "11" e o numero "985388877" # steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)
+  And Eu devo ver que o corpo de resposta retornado esta dentro do especificado           # steps.StepDefinitions.validarCadastroDeNovoCliente()
+      java.lang.NullPointerException
+	at steps.StepDefinitions.validarCadastroDeNovoCliente(StepDefinitions.java:160)
+	at ✽.Eu devo ver que o corpo de resposta retornado esta dentro do especificado(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:8)
+
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Confirmar que o HTTP StatusCode de uma pesquisa está correto&quot;, &quot;Optional[Buscar Clientes]&quot;](2)" classname="runner.TestRunner" time="0.183">
+    <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
+]]></failure>
+    <system-out><![CDATA[
+@FullTesting @SmokeTesting
+Scenario: Confirmar que o HTTP StatusCode de uma pesquisa está correto                    # src/test/java/features/BuscarClientes.feature:11
+  Given Eu tenha acesso ao endpoint /pessoas                                              # steps.StepDefinitions.setUp(java.lang.String)
+  When Eu fizer uma pesquisa usando metodo GET informando DDD "11" e o numero "985388877" # steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)
+  Then Eu devo verificar que o HTTP StatusCode retornado é 200                            # steps.StepDefinitions.validarStatusCode(int)
+      java.lang.AssertionError: expected:<200> but was:<404>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 200(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:14)
+
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Cadastrar um novo cliente&quot;, &quot;Optional[Cadastrar Novos Clientes]&quot;](3)" classname="runner.TestRunner" time="0.431">
+    <system-out><![CDATA[
+@FullTesting @SmokeTesting
+Scenario: Cadastrar um novo cliente                                             # src/test/java/features/CadastrarClientes.feature:5
+  Given Eu tenha acesso ao endpoint /pessoas                                    # steps.StepDefinitions.setUp(java.lang.String)
+  When Eu adicionar um cliente usando metodo POST                               # steps.StepDefinitions.cadastrarNovoCliente()
+  Then Eu devo verificar que o HTTP StatusCode retornado é 201                  # steps.StepDefinitions.validarStatusCode(int)
+  And Eu devo ver que o corpo de resposta retornado esta dentro do especificado # steps.StepDefinitions.validarCadastroDeNovoCliente()
+]]></system-out>
+  </testcase>
+</testsuite>

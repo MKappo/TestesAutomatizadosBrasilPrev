@@ -1,63 +1,64 @@
+@FullTesting
 Feature: Cadastrar Novos Clientes
 
-  @SanityTesting
-  Scenario: Validar o cadastro de um novo cliente
-    Given Que o endpoint /pessoas esteja disponivel
+  @SmokeTesting
+  Scenario: Cadastrar um novo cliente
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST
-    Then O StatusCode retornado deverá ser 201
-    And O corpo de resposta retornado deve estar correto
+    Then Eu devo verificar que o HTTP StatusCode retornado é 201
+    And Eu devo ver que o corpo de resposta retornado esta dentro do especificado
 
-  @SanityTesting
-  Scenario: Validar statusCode e feedback ao tentar cadastrar um CPF já existente
-    Given Que o endpoint /pessoas esteja disponivel
+  @NegativeTesting
+  Scenario: Cadastrar cliente utilizando um CPF já cadastrado
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST
-    Then O StatusCode retornado deverá ser 400
-    And A mensagem de erro "Já existe pessoa cadastrada com o CPF 12345678909" deverá ser exibida
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
+    And Eu devo ver a mensagem de erro "Já existe pessoa cadastrada com o CPF 12345678909"
 
-  @SanityTesting
-  Scenario: Validar statusCode e feedback ao tentar cadastrar um Telefone já existente
-    Given Que o endpoint /pessoas esteja disponivel
+  @NegativeTesting
+  Scenario: Cadastrar cliente utilizando um Telefone já cadastrado
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST com CPF nunca cadastrado porém com telefone já cadastrado
-    Then O StatusCode retornado deverá ser 400
-    And A mensagem de erro "Já existe pessoa cadastrada com o Telefone (11)985388877" deverá ser exibida
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
+    And Eu devo ver a mensagem de erro "Já existe pessoa cadastrada com o Telefone (11)985388877"
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente com header da request incompleto
-    Given Que o endpoint /pessoas esteja disponivel
+  Scenario: Cadastrar um novo cliente com header da request incompleto
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém sem content-type no header
-    Then O StatusCode retornado deverá ser 415
+    Then Eu devo verificar que o HTTP StatusCode retornado é 415
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente sem enviar o corpo da request
-    Given Que o endpoint /pessoas esteja disponivel
+  Scenario: Cadastrar um novo cliente sem enviar o corpo obrigatório da request
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém com corpo da request em branco
-    Then O StatusCode retornado deverá ser 400
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente com o corpo da request incompleto
-    Given Que o endpoint /pessoas esteja disponivel
+  Scenario: Cadastrar um novo cliente com o corpo obigatório da request incompleto
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém com corpo da request inválido
-    Then O StatusCode retornado deverá ser 400
-    And A mensagem de erro "O corpo da Request está fora do padrão" deverá ser exibida
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
+    And Eu devo ver a mensagem de erro "O corpo da Request está fora do padrão"
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente com nome de campos errados no corpo do request
-    Given Que o endpoint /pessoas esteja disponivel
+  Scenario: Cadastrar um novo cliente com nome de campos errados no corpo do request
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém com nomes de campos errados no corpo
-    Then O StatusCode retornado deverá ser 400
-    And A mensagem de erro "O corpo da Request está fora do padrão" deverá ser exibida
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
+    And Eu devo ver a mensagem de erro "O corpo da Request está fora do padrão"
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente utilizando um endpoint incorreto
-    Given Que eu aponte o endpoint /pessoa
+  Scenario: Cadastrar um novo cliente utilizando um endpoint incorreto
+    Given Eu acesse um endpoint invalido como /pessoa
      When Eu adicionar um cliente usando metodo POST
-    Then O StatusCode retornado deverá ser 404
+    Then Eu devo verificar que o HTTP StatusCode retornado é 404
 
   @NegativeTesting
-  Scenario: Validar o cadastro de um novo cliente com tipagem errada dos campos no corpo do request
-    Given Que o endpoint /pessoas esteja disponivel
+  Scenario: Cadastrar um novo cliente com tipagem errada dos campos no corpo do request
+    Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém com tipagem errada dos campos no corpo do request
-    Then O StatusCode retornado deverá ser 400
-    And A mensagem de erro "O corpo da Request está fora do padrão" deverá ser exibida
+    Then Eu devo verificar que o HTTP StatusCode retornado é 400
+    And Eu devo ver a mensagem de erro "O corpo da Request está fora do padrão"
 
 

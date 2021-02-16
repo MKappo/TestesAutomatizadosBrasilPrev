@@ -15,7 +15,7 @@ public class StepDefinitions {
     private Response response;
 
     //Body Segundo Especificação
-    private String validRequest = "{\n" +
+    private final String validRequest = "{\n" +
             "    \"codigo\": 1,\n" +
             "    \"nome\": \"Rommel Von\",\n" +
             "    \"cpf\": \"12345678909\",\n" +
@@ -37,102 +37,13 @@ public class StepDefinitions {
             "    ]\n" +
             "}";
 
-    // Body em desacordo com especificação, sem o campo "cpf"
-    private String invalidRequest = "{\n" +
-            "    \"codigo\": 1,\n" +
-            "    \"nome\": \"Marcelo Capobianco\",\n" +
-            "    \"enderecos\": [\n" +
-            "        {\n" +
-            "            \"logradouro\": \"Rua Libero Badaró\",\n" +
-            "            \"numero\": 21,\n" +
-            "            \"bairro\": \"Centro\",\n" +
-            "            \"cidade\": \"São Paulo\",\n" +
-            "            \"estado\": \"SP\"\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"telefones\": [\n" +
-            "        {\n" +
-            "            \"ddd\": \"11\",\n" +
-            "            \"numero\": \"985652563\"\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}";
-
-    //Body com nome dos campos diferentes do especificado
-    private String camposIncorretosRequest= "{\n" +
-            "    \"codigos\": 1,\n" +
-            "    \"nomes\": \"Rommel Von\",\n" +
-            "    \"cpf\": \"95125875365\",\n" +
-            "    \"enderecos\": [\n" +
-            "        {\n" +
-            "            \"logradouro\": \"Rua Alexandre Dumas\",\n" +
-            "            \"numero\": 123,\n" +
-            "            \"complemento\": \"Empresa\",\n" +
-            "            \"bairro\": \"Chacara Santo Antonio\",\n" +
-            "            \"cidade\": \"São Paulo\",\n" +
-            "            \"estado\": \"SP\"\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"telefone\": [\n" +
-            "        {\n" +
-            "            \"ddd\": \"11\",\n" +
-            "            \"numero\": \"955682436\"\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}";
-
-    //Utilizando tipagens diferentes do especificado em diversos campos do body
-    private String tipagemErradaDosCamposRequest = "{\n" +
-            "    \"codigo\": \"1\",\n" +
-            "    \"nome\": 321456465,\n" +
-            "    \"cpf\": 68425715965,\n" +
-            "    \"enderecos\": [\n" +
-            "        {\n" +
-            "            \"logradouro\": 2562258,\n" +
-            "            \"numero\": \"123\",\n" +
-            "            \"complemento\": 789456,\n" +
-            "            \"bairro\": 321546,\n" +
-            "            \"cidade\": 5465465,\n" +
-            "            \"estado\": \"SP\"\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"telefones\": [\n" +
-            "        {\n" +
-            "            \"ddd\": 11,\n" +
-            "            \"numero\": 975698457\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}";
-
-    private String telefoneJaCadastradoRequest = "{\n" +
-            "    \"codigo\": 1,\n" +
-            "    \"nome\": \"Rommel Von\",\n" +
-            "    \"cpf\": \"32568524722\",\n" +
-            "    \"enderecos\": [\n" +
-            "        {\n" +
-            "            \"logradouro\": \"Rua Alexandre Dumas\",\n" +
-            "            \"numero\": 123,\n" +
-            "            \"complemento\": \"Empresa\",\n" +
-            "            \"bairro\": \"Chacara Santo Antonio\",\n" +
-            "            \"cidade\": \"São Paulo\",\n" +
-            "            \"estado\": \"SP\"\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"telefones\": [\n" +
-            "        {\n" +
-            "            \"ddd\": \"11\",\n" +
-            "            \"numero\": \"985388877\"\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}";
-
-    @Given("Que o endpoint {word} esteja disponivel")
+    @Given("Eu tenha acesso ao endpoint {word}")
     public void setUp(String endpoint) {
         RestAssured.baseURI = "http://localhost:8080";
         path = endpoint;
     }
 
-    @Given("Que eu aponte o endpoint {word}")
+    @Given("Eu acesse um endpoint invalido como {word}")
     public void setUpPathIncorreto(String endpoint) {
         RestAssured.baseURI = "http://localhost:8080";
         path = endpoint;
@@ -150,12 +61,12 @@ public class StepDefinitions {
                     .extract().response();
     }
 
-    @Then("O StatusCode retornado deverá ser {int}")
+    @Then("Eu devo verificar que o HTTP StatusCode retornado é {int}")
     public void validarStatusCode(int codigo) {
         Assert.assertEquals(codigo, response.getStatusCode());
     }
 
-    @And("O corpo de resposta retornado deve estar correto")
+    @And("Eu devo ver que o corpo de resposta retornado esta dentro do especificado")
     public void validarCadastroDeNovoCliente() {
         String codigoCliente = response.jsonPath().get("codigo").toString();
         String nome = response.jsonPath().get("nome");
@@ -186,7 +97,7 @@ public class StepDefinitions {
         Assert.assertEquals("985388877", telefone);
     }
 
-    @And("A mensagem de erro {string} deverá ser exibida")
+    @And("Eu devo ver a mensagem de erro {string}")
     public void validarMensagemDeErro(String mensagem) {
         String mensagemDeErro = response.jsonPath().get("erro");
 
@@ -195,6 +106,28 @@ public class StepDefinitions {
 
     @When("Eu adicionar um cliente usando metodo POST com CPF nunca cadastrado porém com telefone já cadastrado")
     public void cadastrarNovoClienteComTelefoneJaCadastrado() {
+        String telefoneJaCadastradoRequest = "{\n" +
+                "    \"codigo\": 1,\n" +
+                "    \"nome\": \"Rommel Von\",\n" +
+                "    \"cpf\": \"32568524722\",\n" +
+                "    \"enderecos\": [\n" +
+                "        {\n" +
+                "            \"logradouro\": \"Rua Alexandre Dumas\",\n" +
+                "            \"numero\": 123,\n" +
+                "            \"complemento\": \"Empresa\",\n" +
+                "            \"bairro\": \"Chacara Santo Antonio\",\n" +
+                "            \"cidade\": \"São Paulo\",\n" +
+                "            \"estado\": \"SP\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"telefones\": [\n" +
+                "        {\n" +
+                "            \"ddd\": \"11\",\n" +
+                "            \"numero\": \"985388877\"\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
         response =
                 given()
                     .contentType(ContentType.JSON)
@@ -206,7 +139,27 @@ public class StepDefinitions {
     }
 
     @When("Eu adicionar um cliente usando metodo POST porém com corpo da request inválido")
-    public void cadastrarNovoClienteComCorpoDaRequestInválido() {
+    public void cadastrarNovoClienteComCorpoDaRequestInvalido() {
+        // Body em desacordo com especificação, sem o campo "cpf"
+        String invalidRequest = "{\n" +
+                "    \"codigo\": 1,\n" +
+                "    \"nome\": \"Marcelo Capobianco\",\n" +
+                "    \"enderecos\": [\n" +
+                "        {\n" +
+                "            \"logradouro\": \"Rua Libero Badaró\",\n" +
+                "            \"numero\": 21,\n" +
+                "            \"bairro\": \"Centro\",\n" +
+                "            \"cidade\": \"São Paulo\",\n" +
+                "            \"estado\": \"SP\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"telefones\": [\n" +
+                "        {\n" +
+                "            \"ddd\": \"11\",\n" +
+                "            \"numero\": \"985652563\"\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
         response =
                 given()
                     .contentType(ContentType.JSON)
@@ -242,6 +195,28 @@ public class StepDefinitions {
 
     @When("Eu adicionar um cliente usando metodo POST porém com nomes de campos errados no corpo")
     public void cadastrarNovoClienteComNomesDeCamposErradosNoCorpo() {
+        //Body com nome dos campos diferentes do especificado
+        String camposIncorretosRequest = "{\n" +
+                "    \"codigos\": 1,\n" +
+                "    \"nomes\": \"Rommel Von\",\n" +
+                "    \"cpf\": \"95125875365\",\n" +
+                "    \"enderecos\": [\n" +
+                "        {\n" +
+                "            \"logradouro\": \"Rua Alexandre Dumas\",\n" +
+                "            \"numero\": 123,\n" +
+                "            \"complemento\": \"Empresa\",\n" +
+                "            \"bairro\": \"Chacara Santo Antonio\",\n" +
+                "            \"cidade\": \"São Paulo\",\n" +
+                "            \"estado\": \"SP\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"telefone\": [\n" +
+                "        {\n" +
+                "            \"ddd\": \"11\",\n" +
+                "            \"numero\": \"955682436\"\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
         response =
                 given()
                     .contentType(ContentType.JSON)
@@ -254,6 +229,28 @@ public class StepDefinitions {
 
     @When("Eu adicionar um cliente usando metodo POST porém com tipagem errada dos campos no corpo do request")
     public void cadastrarNovoClienteUtilizandoTipagemErradaNoCampoDoRequest() {
+        //Utilizando tipagens diferentes do especificado em diversos campos do body
+        String tipagemErradaDosCamposRequest = "{\n" +
+                "    \"codigo\": \"1\",\n" +
+                "    \"nome\": 321456465,\n" +
+                "    \"cpf\": 68425715965,\n" +
+                "    \"enderecos\": [\n" +
+                "        {\n" +
+                "            \"logradouro\": 2562258,\n" +
+                "            \"numero\": \"123\",\n" +
+                "            \"complemento\": 789456,\n" +
+                "            \"bairro\": 321546,\n" +
+                "            \"cidade\": 5465465,\n" +
+                "            \"estado\": \"SP\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"telefones\": [\n" +
+                "        {\n" +
+                "            \"ddd\": 11,\n" +
+                "            \"numero\": 975698457\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
         response =
                 given()
                     .contentType(ContentType.JSON)
@@ -273,64 +270,6 @@ public class StepDefinitions {
                     .contentType(ContentType.JSON)
                     .extract().response();
     }
-
-/*
-    @Then("Os dados do cliente {string} deverão ser exibido")
-    public void validarNomeDoClienteCadastrado(String nome) {
-        Assert.assertEquals(nomeCliente,nome);
-    }
-
-
-
-
-    @When("Eu fizer uma pesquisa usando metodo GET informando apenas o DDD {string}")
-    public void pesquisarClientePorDDD(String DDD) {
-           statusCode = RestAssured
-                .when()
-                    .get("/" + DDD)
-                .then()
-                    .extract().statusCode();
-    }
-
-
-
-
-
-    @When("Eu adicionar um novo cliente usando metodo POST com corpo da request incompleto")
-    public void euAdicionarUmNovoClienteUsandoMetodoPOSTComCorpoDaRequestIncompleto() {
-    }
-
-    @When("Eu adicionar tentar cadastrar um cliente existente usando metodo POST")
-    public void euAdicionarTentarCadastrarUmClienteExistenteUsandoMetodoPOST() {
-        erroPesquisa = given()
-                .contentType(ContentType.JSON)
-                .body("{\n" +
-                        "    \"codigo\": 1,\n" +
-                        "    \"nome\": \"Rommel Von\",\n" +
-                        "    \"cpf\": \"12345678909\",\n" +
-                        "    \"enderecos\": [\n" +
-                        "        {\n" +
-                        "            \"logradouro\": \"Rua Alexandre Dumas\",\n" +
-                        "            \"numero\": 123,\n" +
-                        "            \"complemento\": \"Empresa\",\n" +
-                        "            \"bairro\": \"Chacara Santo Antonio\",\n" +
-                        "            \"cidade\": \"São Paulo\",\n" +
-                        "            \"estado\": \"SP\"\n" +
-                        "        }\n" +
-                        "    ],\n" +
-                        "    \"telefones\": [\n" +
-                        "        {\n" +
-                        "            \"ddd\": \"11\",\n" +
-                        "            \"numero\": \"985388877\"\n" +
-                        "        }\n" +
-                        "    ]\n" +
-                        "}")
-                .when()
-                .post(RestAssured.baseURI + "/" + RestAssured.basePath)
-                .then()
-                .extract().path("erro");
-    }
-*/
 }
 
 

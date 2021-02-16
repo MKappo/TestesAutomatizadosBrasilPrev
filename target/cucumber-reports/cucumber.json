@@ -1,0 +1,1113 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-16T14:26:21.433Z",
+        "line": 5,
+        "name": "Cadastrar um novo cliente",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 340000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1531000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Eu adicionar um cliente usando metodo POST",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoCliente()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1126000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Eu devo ver que o corpo de resposta retornado esta dentro do especificado",
+            "match": {
+              "location": "steps.StepDefinitions.validarCadastroDeNovoCliente()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@SmokeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.462Z",
+        "line": 12,
+        "name": "Cadastrar cliente utilizando um CPF já cadastrado",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-cliente-utilizando-um-cpf-já-cadastrado",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 64000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Eu adicionar um cliente usando metodo POST",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoCliente()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu devo ver a mensagem de erro \"Já existe pessoa cadastrada com o CPF 12345678909\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Já existe pessoa cadastrada com o CPF 12345678909\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.552Z",
+        "line": 19,
+        "name": "Cadastrar cliente utilizando um Telefone já cadastrado",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-cliente-utilizando-um-telefone-já-cadastrado",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Eu adicionar um cliente usando metodo POST com CPF nunca cadastrado porém com telefone já cadastrado",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteComTelefoneJaCadastrado()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Eu devo ver a mensagem de erro \"Já existe pessoa cadastrada com o Telefone (11)985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Já existe pessoa cadastrada com o Telefone (11)985388877\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.625Z",
+        "line": 26,
+        "name": "Cadastrar um novo cliente com header da request incompleto",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-com-header-da-request-incompleto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 114000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Eu adicionar um cliente usando metodo POST porém sem content-type no header",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteSemContentTypeNoHeader()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 415",
+            "match": {
+              "arguments": [
+                {
+                  "val": "415",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.751Z",
+        "line": 32,
+        "name": "Cadastrar um novo cliente sem enviar o corpo obrigatório da request",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-sem-enviar-o-corpo-obrigatório-da-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Eu adicionar um cliente usando metodo POST porém com corpo da request em branco",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteComCorpoDaRequestEmBranco()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.790Z",
+        "line": 38,
+        "name": "Cadastrar um novo cliente com o corpo obigatório da request incompleto",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-com-o-corpo-obigatório-da-request-incompleto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 156000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Eu adicionar um cliente usando metodo POST porém com corpo da request inválido",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteComCorpoDaRequestInválido()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c500\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)\n\tat ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:41)\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "line": 41,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 42,
+            "name": "Eu devo ver a mensagem de erro \"O corpo da Request está fora do padrão\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"O corpo da Request está fora do padrão\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:24.975Z",
+        "line": 45,
+        "name": "Cadastrar um novo cliente com nome de campos errados no corpo do request",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-com-nome-de-campos-errados-no-corpo-do-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Eu adicionar um cliente usando metodo POST porém com nomes de campos errados no corpo",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteComNomesDeCamposErradosNoCorpo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c500\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)\n\tat ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:48)\n",
+              "duration": 1000000,
+              "status": "failed"
+            },
+            "line": 48,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 49,
+            "name": "Eu devo ver a mensagem de erro \"O corpo da Request está fora do padrão\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"O corpo da Request está fora do padrão\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.017Z",
+        "line": 52,
+        "name": "Cadastrar um novo cliente utilizando um endpoint incorreto",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-utilizando-um-endpoint-incorreto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Eu acesse um endpoint invalido como /pessoa",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoa",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.StepDefinitions.setUpPathIncorreto(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 41000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Eu adicionar um cliente usando metodo POST",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoCliente()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.070Z",
+        "line": 58,
+        "name": "Cadastrar um novo cliente com tipagem errada dos campos no corpo do request",
+        "description": "",
+        "id": "cadastrar-novos-clientes;cadastrar-um-novo-cliente-com-tipagem-errada-dos-campos-no-corpo-do-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "Eu adicionar um cliente usando metodo POST porém com tipagem errada dos campos no corpo do request",
+            "match": {
+              "location": "steps.StepDefinitions.cadastrarNovoClienteUtilizandoTipagemErradaNoCampoDoRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c201\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)\n\tat ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:61)\n",
+              "status": "failed"
+            },
+            "line": 61,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 62,
+            "name": "Eu devo ver a mensagem de erro \"O corpo da Request está fora do padrão\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"O corpo da Request está fora do padrão\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastrar Novos Clientes",
+    "description": "",
+    "id": "cadastrar-novos-clientes",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/CadastrarClientes.feature",
+    "tags": [
+      {
+        "name": "@FullTesting",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-16T14:26:25.112Z",
+        "line": 5,
+        "name": "Pesquisar um cliente existente",
+        "description": "",
+        "id": "pesquisar-clientes;pesquisar-um-cliente-existente",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 84000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Eu fizer uma pesquisa usando metodo GET informando DDD \"11\" e o numero \"985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"11\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"985388877\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 150000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Eu devo ver que o corpo de resposta retornado esta dentro do especificado",
+            "match": {
+              "location": "steps.StepDefinitions.validarCadastroDeNovoCliente()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@SmokeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.355Z",
+        "line": 11,
+        "name": "Confirmar que o HTTP StatusCode de uma pesquisa está correto",
+        "description": "",
+        "id": "pesquisar-clientes;confirmar-que-o-http-statuscode-de-uma-pesquisa-está-correto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 37000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Eu fizer uma pesquisa usando metodo GET informando DDD \"11\" e o numero \"985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"11\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"985388877\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@SmokeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.400Z",
+        "line": 17,
+        "name": "Pesquisar um cliente utilizando um telefone inexistente na busca",
+        "description": "",
+        "id": "pesquisar-clientes;pesquisar-um-cliente-utilizando-um-telefone-inexistente-na-busca",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Eu fizer uma pesquisa usando metodo GET informando DDD \"11\" e o numero \"789488877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"11\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"789488877\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Eu devo ver a mensagem de erro \"Não existe pessoa com o telefone (11)789488877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Não existe pessoa com o telefone (11)789488877\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.442Z",
+        "line": 23,
+        "name": "Pesquisar um cliente utilizando um DDD inexistente na busca",
+        "description": "",
+        "id": "pesquisar-clientes;pesquisar-um-cliente-utilizando-um-ddd-inexistente-na-busca",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Eu tenha acesso ao endpoint /pessoas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/pessoas",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.StepDefinitions.setUp(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Eu fizer uma pesquisa usando metodo GET informando DDD \"99\" e o numero \"985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"99\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"985388877\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Eu devo ver a mensagem de erro \"Não existe pessoa com o telefone (99)985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Não existe pessoa com o telefone (99)985388877\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.StepDefinitions.validarMensagemDeErro(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-16T14:26:25.495Z",
+        "line": 29,
+        "name": "Pesquisar um cliente utilizando um endpoint incorreto",
+        "description": "",
+        "id": "pesquisar-clientes;pesquisar-um-cliente-utilizando-um-endpoint-incorreto",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Eu acesse um endpoint invalido como /cliente",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/cliente",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.StepDefinitions.setUpPathIncorreto(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Eu fizer uma pesquisa usando metodo GET informando DDD \"11\" e o numero \"985388877\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"11\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"985388877\"",
+                  "offset": 71
+                }
+              ],
+              "location": "steps.StepDefinitions.pesquisarUsuarioPorDDDeNumero(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Eu devo verificar que o HTTP StatusCode retornado é 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 52
+                }
+              ],
+              "location": "steps.StepDefinitions.validarStatusCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FullTesting"
+          },
+          {
+            "name": "@NegativeTesting"
+          }
+        ]
+      }
+    ],
+    "name": "Pesquisar Clientes",
+    "description": "",
+    "id": "pesquisar-clientes",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/PesquisarClientes.feature",
+    "tags": [
+      {
+        "name": "@FullTesting",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
