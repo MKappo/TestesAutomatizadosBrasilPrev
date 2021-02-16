@@ -25,4 +25,6 @@ Foram criados duas features no Cucumber de acordo com o desafio proposto e com s
   * mvn spring-boot:run
 * Dê um fork do projeto de testes: https://github.com/MKappo/TestesAutomatizadosBrasilPrev
 * Importe no IntelliJ, Eclipse ou IDE de preferência
-* Com a API rodando local basta executar os testes.
+* Com a API rodando local basta executar os testes através da classe TestRunner.
+
+Obs: O projeto foi configurado para gerar um test report após execução, bastar abrir o arquivo: 
