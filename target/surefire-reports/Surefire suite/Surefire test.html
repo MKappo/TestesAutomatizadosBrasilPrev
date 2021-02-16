@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 16 10:59:00 BRT 2021</td>
+<td>Started on:</td><td>Tue Feb 16 11:47:53 BRT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3672 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4855 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,34 +75,62 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Buscar um cliente existente", "Optional[Buscar Clientes]"</td>
-<td><div><pre>java.lang.NullPointerException
-	at steps.StepDefinitions.validarCadastroDeNovoCliente(StepDefinitions.java:160)
-	at ✽.Eu devo ver que o corpo de resposta retornado esta dentro do especificado(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace60181881", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace60181881'><pre>java.lang.NullPointerException
-	at steps.StepDefinitions.validarCadastroDeNovoCliente(StepDefinitions.java:160)
-	at ✽.Eu devo ver que o corpo de resposta retornado esta dentro do especificado(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:8)
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente com o corpo obigatório da request incompleto", "Optional[Cadastrar Novos Clientes]"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:41)
+</pre></div><a href='#' onClick='toggleBox("stack-trace969115094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace969115094'><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;500&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:41)
 </pre></div></td>
-<td>2</td>
+<td>0</td>
 <td>runner.TestRunner@43814d18</td></tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Confirmar que o HTTP StatusCode de uma pesquisa está correto", "Optional[Buscar Clientes]"</td>
-<td><div><pre>java.lang.AssertionError: expected:&lt;200&gt; but was:&lt;404&gt;
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente com nome de campos errados no corpo do request", "Optional[Cadastrar Novos Clientes]"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;500&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)
-	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 200(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace765420745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace765420745'><pre>java.lang.AssertionError: expected:&lt;200&gt; but was:&lt;404&gt;
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace534643569", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace534643569'><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;500&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)
-	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 200(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:14)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:48)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente com tipagem errada dos campos no corpo do request", "Optional[Cadastrar Novos Clientes]"</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;201&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:61)
+</pre></div><a href='#' onClick='toggleBox("stack-trace43368234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace43368234'><pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;201&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+	at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:61)
 </pre></div></td>
 <td>0</td>
 <td>runner.TestRunner@43814d18</td></tr>
@@ -116,6 +144,56 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>3</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar cliente utilizando um CPF já cadastrado", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar cliente utilizando um Telefone já cadastrado", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente com header da request incompleto", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente sem enviar o corpo obrigatório da request", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cadastrar um novo cliente utilizando um endpoint incorreto", "Optional[Cadastrar Novos Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pesquisar um cliente existente", "Optional[Pesquisar Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Confirmar que o HTTP StatusCode de uma pesquisa está correto", "Optional[Pesquisar Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pesquisar um cliente utilizando um telefone inexistente na busca", "Optional[Pesquisar Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pesquisar um cliente utilizando um DDD inexistente na busca", "Optional[Pesquisar Clientes]"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner@43814d18</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pesquisar um cliente utilizando um endpoint incorreto", "Optional[Pesquisar Clientes]"</td>
 <td></td>
 <td>0</td>
 <td>runner.TestRunner@43814d18</td></tr>

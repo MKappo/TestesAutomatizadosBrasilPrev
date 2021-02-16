@@ -35,7 +35,7 @@ Feature: Cadastrar Novos Clientes
     Then Eu devo verificar que o HTTP StatusCode retornado é 400
 
   @NegativeTesting
-  Scenario: Cadastrar um novo cliente com o corpo obigatório da request incompleto
+  Scenario: Cadastrar um novo cliente com o corpo obrigatório da request incompleto
     Given Eu tenha acesso ao endpoint /pessoas
     When Eu adicionar um cliente usando metodo POST porém com corpo da request inválido
     Then Eu devo verificar que o HTTP StatusCode retornado é 400

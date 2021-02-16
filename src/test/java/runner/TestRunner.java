@@ -10,8 +10,7 @@ import io.cucumber.testng.CucumberOptions;
         },
         features = {"src/test/java/features"},
         glue = {"steps"},
-        tags = "@FullTesting",
-        monochrome = true
+        tags = "@FullTesting"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 

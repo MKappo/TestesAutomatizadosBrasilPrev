@@ -1,10 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.124 s <<< FAILURE! - in runner.TestRunner
-runner.TestRunner.runScenario["Buscar um cliente existente", "Optional[Buscar Clientes]"](1)  Time elapsed: 2.377 s  <<< FAILURE!
-java.lang.NullPointerException
+Tests run: 14, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.214 s <<< FAILURE! - in runner.TestRunner
+runner.TestRunner.runScenario["Cadastrar um novo cliente com o corpo obigatório da request incompleto", "Optional[Cadastrar Novos Clientes]"](6)  Time elapsed: 0.078 s  <<< FAILURE!
+java.lang.AssertionError: expected:<400> but was:<500>
 
-runner.TestRunner.runScenario["Confirmar que o HTTP StatusCode de uma pesquisa está correto", "Optional[Buscar Clientes]"](2)  Time elapsed: 0.183 s  <<< FAILURE!
-java.lang.AssertionError: expected:<200> but was:<404>
+runner.TestRunner.runScenario["Cadastrar um novo cliente com nome de campos errados no corpo do request", "Optional[Cadastrar Novos Clientes]"](7)  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: expected:<400> but was:<500>
+
+runner.TestRunner.runScenario["Cadastrar um novo cliente com tipagem errada dos campos no corpo do request", "Optional[Cadastrar Novos Clientes]"](9)  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: expected:<400> but was:<201>
 

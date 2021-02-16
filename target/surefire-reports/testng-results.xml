@@ -1,75 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
+<testng-results skipped="0" failed="3" ignored="0" total="14" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="3672" started-at="2021-02-16T10:59:00 BRT" finished-at="2021-02-16T10:59:03 BRT">
+  <suite name="Surefire suite" duration-ms="4855" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:58 BRT">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="3672" started-at="2021-02-16T10:59:00 BRT" finished-at="2021-02-16T10:59:03 BRT">
+    <test name="Surefire test" duration-ms="4855" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:58 BRT">
       <class name="runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@43814d18]" name="setUpClass" is-config="true" duration-ms="507" started-at="2021-02-16T10:59:00 BRT" finished-at="2021-02-16T10:59:00 BRT">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@43814d18]" name="setUpClass" is-config="true" duration-ms="512" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:54 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="2360" started-at="2021-02-16T10:59:00 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T10:59:03 BRT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Buscar um cliente existente"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Buscar Clientes]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at steps.StepDefinitions.validarCadastroDeNovoCliente(StepDefinitions.java:160)
-at ✽.Eu devo ver que o corpo de resposta retornado esta dentro do especificado(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="192" started-at="2021-02-16T10:59:03 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T10:59:03 BRT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Confirmar que o HTTP StatusCode de uma pesquisa está correto"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Buscar Clientes]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected:<200> but was:<404>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<200> but was:<404>
-at org.junit.Assert.fail(Assert.java:89)
-at org.junit.Assert.failNotEquals(Assert.java:835)
-at org.junit.Assert.assertEquals(Assert.java:647)
-at org.junit.Assert.assertEquals(Assert.java:633)
-at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:155)
-at ✽.Eu devo verificar que o HTTP StatusCode retornado é 200(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/BuscarClientes.feature:14)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="432" started-at="2021-02-16T10:59:03 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T10:59:03 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="3455" started-at="2021-02-16T11:47:54 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
           <params>
             <param index="0">
               <value>
@@ -85,7 +30,260 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 200(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@43814d18]" name="tearDownClass" is-config="true" duration-ms="140" started-at="2021-02-16T10:59:03 BRT" finished-at="2021-02-16T10:59:03 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="71" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar cliente utilizando um CPF já cadastrado"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="53" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar cliente utilizando um Telefone já cadastrado"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="56" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente com header da request incompleto"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente sem enviar o corpo obrigatório da request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="76" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente com o corpo obigatório da request incompleto"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<400> but was:<500>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<400> but was:<500>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:41)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="30" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente com nome de campos errados no corpo do request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<400> but was:<500>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<400> but was:<500>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:48)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="47" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente utilizando um endpoint incorreto"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="38" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cadastrar um novo cliente com tipagem errada dos campos no corpo do request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastrar Novos Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<400> but was:<201>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<400> but was:<201>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)
+at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:61)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="192" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Pesquisar um cliente existente"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="31" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Confirmar que o HTTP StatusCode de uma pesquisa está correto"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Pesquisar um cliente utilizando um telefone inexistente na busca"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Pesquisar um cliente utilizando um DDD inexistente na busca"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="22" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Pesquisar um cliente utilizando um endpoint incorreto"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@43814d18]" name="tearDownClass" is-config="true" duration-ms="115" started-at="2021-02-16T11:47:58 BRT" finished-at="2021-02-16T11:47:58 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
