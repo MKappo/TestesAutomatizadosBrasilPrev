@@ -18,13 +18,20 @@ Foram criados duas features no Cucumber de acordo com o desafio proposto e com s
 
 # Para rodar os testes
 
-* Dê um fork neste projeto da API: https://github.com/MKappo/Brasilprev-qa-test-master
+* Dê um fork neste projeto da API: 
+<a>https://github.com/MKappo/Brasilprev-qa-test-master<a>
 * Instale as dependências 
-  * mvn clean install
+```shell
+mvn clean install
+```
 * Executar o projeto 
+```shell
   * mvn spring-boot:run
+```
 * Dê um fork do projeto de testes: https://github.com/MKappo/TestesAutomatizadosBrasilPrev
 * Importe no IntelliJ, Eclipse ou IDE de preferência
 * Com a API rodando local basta executar os testes através da classe TestRunner.
 
-Obs: O projeto foi configurado para gerar um test report após execução, bastar abrir o arquivo: 
+Obs: O projeto foi configurado para gerar um test report após execução, bastar abrir o arquivo:
+//
+/target/cucumber-reports/cucumber.html
