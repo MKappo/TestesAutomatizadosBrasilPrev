@@ -1,4 +1,4 @@
-package resources.steps;
+package steps;
 
 import io.cucumber.java.en.*;
 import io.restassured.RestAssured;
@@ -6,9 +6,10 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
-public class StepsDefinition {
+
+public class StepDefinitions {
 
     private String path;
     private Response response;
@@ -125,16 +126,16 @@ public class StepsDefinition {
             "    ]\n" +
             "}";
 
-    @Given("Que o endpoint pessoas exista")
-    public void setUp() {
+    @Given("Que o endpoint {word} esteja disponivel")
+    public void setUp(String endpoint) {
         RestAssured.baseURI = "http://localhost:8080";
-        path = "/pessoas";
+        path = endpoint;
     }
 
-    @Given("Que o endpoint esteja incorreto")
-    public void setUpPathIncorreto() {
+    @Given("Que eu aponte o endpoint {word}")
+    public void setUpPathIncorreto(String endpoint) {
         RestAssured.baseURI = "http://localhost:8080";
-        path = "/pessoa";
+        path = endpoint;
     }
 
     @When("Eu adicionar um cliente usando metodo POST")
@@ -154,7 +155,7 @@ public class StepsDefinition {
         Assert.assertEquals(codigo, response.getStatusCode());
     }
 
-    @And("O corpo de resposta retornado esteja correto")
+    @And("O corpo de resposta retornado deve estar correto")
     public void validarCadastroDeNovoCliente() {
         String codigoCliente = response.jsonPath().get("codigo").toString();
         String nome = response.jsonPath().get("nome");
@@ -263,33 +264,17 @@ public class StepsDefinition {
                      .extract().response();
     }
 
-
-}
-
-
-/*
     @When("Eu fizer uma pesquisa usando metodo GET informando DDD {string} e o numero {string}")
     public void pesquisarUsuarioPorDDDeNumero(String DDD, String numero) {
-        nomeCliente = RestAssured
-                .when()
-                    .get("/" + DDD + "/" + numero)
+        response =
+                when()
+                    .get(path + "/" + DDD + "/" + numero)
                 .then()
-                    .extract().path("nome");
-
-        statusCode = RestAssured
-                .when()
-                    .get("/" + DDD + "/" + numero)
-                .then()
-                    .extract().response().getStatusCode();
-
-
-        erroPesquisa = RestAssured
-                .when()
-                    .get("/" + DDD + "/" + numero)
-                .then()
-                    .extract().path("erro");
+                    .contentType(ContentType.JSON)
+                    .extract().response();
     }
 
+/*
     @Then("Os dados do cliente {string} deverão ser exibido")
     public void validarNomeDoClienteCadastrado(String nome) {
         Assert.assertEquals(nomeCliente,nome);
@@ -345,8 +330,8 @@ public class StepsDefinition {
                 .then()
                 .extract().path("erro");
     }
+*/
 }
 
- */
 
 
