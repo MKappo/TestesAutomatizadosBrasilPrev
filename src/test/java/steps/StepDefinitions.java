@@ -16,7 +16,7 @@ public class StepDefinitions {
 
     //Body Segundo Especificação
     private final String validRequest = "{\n" +
-            "    \"codigo\": 1,\n" +
+            "    \"codigo\": 0,\n" +
             "    \"nome\": \"Rommel Von\",\n" +
             "    \"cpf\": \"12345678909\",\n" +
             "    \"enderecos\": [\n" +
