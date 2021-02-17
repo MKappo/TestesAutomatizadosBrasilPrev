@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="14" passed="11">
+<testng-results skipped="0" failed="3" ignored="0" total="15" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="4855" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:58 BRT">
+  <suite name="Surefire suite" duration-ms="6236" started-at="2021-02-17T09:56:30 BRT" finished-at="2021-02-17T09:56:37 BRT">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="4855" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:58 BRT">
+    <test name="Surefire test" duration-ms="6236" started-at="2021-02-17T09:56:30 BRT" finished-at="2021-02-17T09:56:37 BRT">
       <class name="runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@43814d18]" name="setUpClass" is-config="true" duration-ms="512" started-at="2021-02-16T11:47:53 BRT" finished-at="2021-02-16T11:47:54 BRT">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@43814d18]" name="setUpClass" is-config="true" duration-ms="652" started-at="2021-02-17T09:56:30 BRT" finished-at="2021-02-17T09:56:31 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="3455" started-at="2021-02-16T11:47:54 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="4386" started-at="2021-02-17T09:56:31 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="71" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="71" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="53" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:57 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="51" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="56" started-at="2021-02-16T11:47:57 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="60" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="55" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -94,11 +94,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="76" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="136" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Cadastrar um novo cliente com o corpo obigatório da request incompleto"]]>
+                <![CDATA["Cadastrar um novo cliente com o corpo obrigatório da request incompleto"]]>
               </value>
             </param>
             <param index="1">
@@ -125,7 +125,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="30" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="40" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -156,7 +156,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="47" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="40" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -172,7 +172,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="38" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="65" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -203,7 +203,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="192" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="203" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -219,7 +219,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="31" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="32" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -235,7 +235,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="30" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -251,7 +251,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="33" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="35" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -267,7 +267,23 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="22" started-at="2021-02-16T11:47:58 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="37" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Pesquisar um cliente utilizando DDD e o nome do cliente na busca"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Pesquisar Clientes]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@43814d18]" name="runScenario" duration-ms="18" started-at="2021-02-17T09:56:36 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-02-17T09:56:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -283,7 +299,7 @@ at ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mka
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@43814d18]" name="tearDownClass" is-config="true" duration-ms="115" started-at="2021-02-16T11:47:58 BRT" finished-at="2021-02-16T11:47:58 BRT">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@43814d18]" name="tearDownClass" is-config="true" duration-ms="211" started-at="2021-02-17T09:56:36 BRT" finished-at="2021-02-17T09:56:37 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

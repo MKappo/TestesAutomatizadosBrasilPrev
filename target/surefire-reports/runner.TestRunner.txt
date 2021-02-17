@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.214 s <<< FAILURE! - in runner.TestRunner
-runner.TestRunner.runScenario["Cadastrar um novo cliente com o corpo obigatório da request incompleto", "Optional[Cadastrar Novos Clientes]"](6)  Time elapsed: 0.078 s  <<< FAILURE!
+Tests run: 15, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 6.737 s <<< FAILURE! - in runner.TestRunner
+runner.TestRunner.runScenario["Cadastrar um novo cliente com o corpo obrigatório da request incompleto", "Optional[Cadastrar Novos Clientes]"](6)  Time elapsed: 0.139 s  <<< FAILURE!
 java.lang.AssertionError: expected:<400> but was:<500>
 
-runner.TestRunner.runScenario["Cadastrar um novo cliente com nome de campos errados no corpo do request", "Optional[Cadastrar Novos Clientes]"](7)  Time elapsed: 0.048 s  <<< FAILURE!
+runner.TestRunner.runScenario["Cadastrar um novo cliente com nome de campos errados no corpo do request", "Optional[Cadastrar Novos Clientes]"](7)  Time elapsed: 0.04 s  <<< FAILURE!
 java.lang.AssertionError: expected:<400> but was:<500>
 
-runner.TestRunner.runScenario["Cadastrar um novo cliente com tipagem errada dos campos no corpo do request", "Optional[Cadastrar Novos Clientes]"](9)  Time elapsed: 0.045 s  <<< FAILURE!
+runner.TestRunner.runScenario["Cadastrar um novo cliente com tipagem errada dos campos no corpo do request", "Optional[Cadastrar Novos Clientes]"](9)  Time elapsed: 0.068 s  <<< FAILURE!
 java.lang.AssertionError: expected:<400> but was:<201>
 

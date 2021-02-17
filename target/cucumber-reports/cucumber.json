@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-16T18:46:59.563Z",
+        "start_timestamp": "2021-02-17T12:58:15.665Z",
         "line": 5,
         "name": "Cadastrar um novo cliente",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 468000000,
+              "duration": 375000000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1563000000,
+              "duration": 1199000000,
               "status": "passed"
             },
             "line": 7,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 3000000,
+              "duration": 2000000,
               "status": "passed"
             },
             "line": 8,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 1181000000,
+              "duration": 1061000000,
               "status": "passed"
             },
             "line": 9,
@@ -82,7 +82,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:02.817Z",
+        "start_timestamp": "2021-02-17T12:58:18.336Z",
         "line": 12,
         "name": "Cadastrar cliente utilizando um CPF já cadastrado",
         "description": "",
@@ -92,7 +92,6 @@
         "steps": [
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
             "line": 13,
@@ -110,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 51000000,
+              "duration": 38000000,
               "status": "passed"
             },
             "line": 14,
@@ -122,7 +121,6 @@
           },
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
             "line": 15,
@@ -140,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 17000000,
+              "duration": 20000000,
               "status": "passed"
             },
             "line": 16,
@@ -167,7 +165,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:02.903Z",
+        "start_timestamp": "2021-02-17T12:58:18.408Z",
         "line": 19,
         "name": "Cadastrar cliente utilizando um Telefone já cadastrado",
         "description": "",
@@ -177,6 +175,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 20,
@@ -194,7 +193,7 @@
           },
           {
             "result": {
-              "duration": 45000000,
+              "duration": 33000000,
               "status": "passed"
             },
             "line": 21,
@@ -223,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 13000000,
+              "duration": 23000000,
               "status": "passed"
             },
             "line": 23,
@@ -250,7 +249,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:02.974Z",
+        "start_timestamp": "2021-02-17T12:58:18.476Z",
         "line": 26,
         "name": "Cadastrar um novo cliente com header da request incompleto",
         "description": "",
@@ -277,7 +276,7 @@
           },
           {
             "result": {
-              "duration": 50000000,
+              "duration": 34000000,
               "status": "passed"
             },
             "line": 28,
@@ -316,7 +315,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.035Z",
+        "start_timestamp": "2021-02-17T12:58:18.520Z",
         "line": 32,
         "name": "Cadastrar um novo cliente sem enviar o corpo obrigatório da request",
         "description": "",
@@ -344,7 +343,7 @@
           },
           {
             "result": {
-              "duration": 24000000,
+              "duration": 21000000,
               "status": "passed"
             },
             "line": 34,
@@ -382,7 +381,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.075Z",
+        "start_timestamp": "2021-02-17T12:58:18.557Z",
         "line": 38,
         "name": "Cadastrar um novo cliente com o corpo obrigatório da request incompleto",
         "description": "",
@@ -392,6 +391,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 39,
@@ -409,7 +409,7 @@
           },
           {
             "result": {
-              "duration": 66000000,
+              "duration": 63000000,
               "status": "passed"
             },
             "line": 40,
@@ -422,7 +422,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c500\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat steps.StepDefinitions.validarStatusCode(StepDefinitions.java:66)\n\tat ✽.Eu devo verificar que o HTTP StatusCode retornado é 400(file:///home/mkapobianco/Projects/TestesAutomatizadosBrasilPrev/src/test/java/features/CadastrarClientes.feature:41)\n",
-              "duration": 1000000,
+              "duration": 3000000,
               "status": "failed"
             },
             "line": 41,
@@ -440,7 +440,6 @@
           },
           {
             "result": {
-              "duration": 1000000,
               "status": "skipped"
             },
             "line": 42,
@@ -467,7 +466,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.169Z",
+        "start_timestamp": "2021-02-17T12:58:18.634Z",
         "line": 45,
         "name": "Cadastrar um novo cliente com nome de campos errados no corpo do request",
         "description": "",
@@ -477,7 +476,6 @@
         "steps": [
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
             "line": 46,
@@ -495,7 +493,7 @@
           },
           {
             "result": {
-              "duration": 29000000,
+              "duration": 30000000,
               "status": "passed"
             },
             "line": 47,
@@ -551,7 +549,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.219Z",
+        "start_timestamp": "2021-02-17T12:58:18.713Z",
         "line": 52,
         "name": "Cadastrar um novo cliente utilizando um endpoint incorreto",
         "description": "",
@@ -561,6 +559,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 53,
@@ -578,7 +577,7 @@
           },
           {
             "result": {
-              "duration": 22000000,
+              "duration": 49000000,
               "status": "passed"
             },
             "line": 54,
@@ -616,7 +615,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.254Z",
+        "start_timestamp": "2021-02-17T12:58:18.790Z",
         "line": 58,
         "name": "Cadastrar um novo cliente com tipagem errada dos campos no corpo do request",
         "description": "",
@@ -626,6 +625,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 59,
@@ -643,7 +643,7 @@
           },
           {
             "result": {
-              "duration": 25000000,
+              "duration": 33000000,
               "status": "passed"
             },
             "line": 60,
@@ -673,7 +673,6 @@
           },
           {
             "result": {
-              "duration": 1000000,
               "status": "skipped"
             },
             "line": 62,
@@ -720,7 +719,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-16T18:47:03.290Z",
+        "start_timestamp": "2021-02-17T12:58:18.854Z",
         "line": 5,
         "name": "Pesquisar um cliente existente",
         "description": "",
@@ -747,7 +746,7 @@
           },
           {
             "result": {
-              "duration": 82000000,
+              "duration": 91000000,
               "status": "passed"
             },
             "line": 7,
@@ -769,7 +768,7 @@
           },
           {
             "result": {
-              "duration": 156000000,
+              "duration": 307000000,
               "status": "passed"
             },
             "line": 8,
@@ -790,7 +789,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.541Z",
+        "start_timestamp": "2021-02-17T12:58:19.270Z",
         "line": 11,
         "name": "Confirmar que o HTTP StatusCode de uma pesquisa está correto",
         "description": "",
@@ -800,7 +799,6 @@
         "steps": [
           {
             "result": {
-              "duration": 1000000,
               "status": "passed"
             },
             "line": 12,
@@ -818,7 +816,7 @@
           },
           {
             "result": {
-              "duration": 35000000,
+              "duration": 31000000,
               "status": "passed"
             },
             "line": 13,
@@ -840,6 +838,7 @@
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 14,
@@ -866,7 +865,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.593Z",
+        "start_timestamp": "2021-02-17T12:58:19.316Z",
         "line": 17,
         "name": "Pesquisar um cliente utilizando um telefone inexistente na busca",
         "description": "",
@@ -893,7 +892,7 @@
           },
           {
             "result": {
-              "duration": 33000000,
+              "duration": 24000000,
               "status": "passed"
             },
             "line": 19,
@@ -942,7 +941,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.661Z",
+        "start_timestamp": "2021-02-17T12:58:19.395Z",
         "line": 23,
         "name": "Pesquisar um cliente utilizando um DDD inexistente na busca",
         "description": "",
@@ -969,7 +968,7 @@
           },
           {
             "result": {
-              "duration": 20000000,
+              "duration": 29000000,
               "status": "passed"
             },
             "line": 25,
@@ -991,7 +990,7 @@
           },
           {
             "result": {
-              "duration": 11000000,
+              "duration": 22000000,
               "status": "passed"
             },
             "line": 26,
@@ -1018,7 +1017,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.702Z",
+        "start_timestamp": "2021-02-17T12:58:19.454Z",
         "line": 29,
         "name": "Pesquisar um cliente utilizando DDD e o nome do cliente na busca",
         "description": "",
@@ -1028,6 +1027,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 30,
@@ -1045,7 +1045,7 @@
           },
           {
             "result": {
-              "duration": 19000000,
+              "duration": 35000000,
               "status": "passed"
             },
             "line": 31,
@@ -1094,7 +1094,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-16T18:47:03.731Z",
+        "start_timestamp": "2021-02-17T12:58:19.496Z",
         "line": 35,
         "name": "Pesquisar um cliente utilizando um endpoint incorreto",
         "description": "",
@@ -1121,7 +1121,7 @@
           },
           {
             "result": {
-              "duration": 17000000,
+              "duration": 28000000,
               "status": "passed"
             },
             "line": 37,
