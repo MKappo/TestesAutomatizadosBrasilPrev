@@ -2,9 +2,8 @@
 Avaliação de Conhecimentos em Automação de Testes de APIRest Utilizando Java, Cucumber, Junit e RestAssured.
 
 # Sobre os testes
-Neste repositório você encontrará o projeto que criei utilizando __Cucumber-Java__, __JUnit__ e __RestAssured__.
-Foram criados duas features no Cucumber de acordo com o desafio proposto e com seus respectivos cenários de testes aplicáveis que julguei ser os mais importantes.
-Entre eles:
+Neste repositório você encontrará o projeto que criei utilizando __Cucumber-Java__, __JUnit__,__RestAssured__ e __TestNG__.
+Eu criei duas features no Cucumber de acordo com o desafio proposto e com seus respectivos cenários de testes aplicáveis utilizando uma abordagem de testes que podesse cobrir tudo que envolve testes de API, como:
 
 * Continuidade de Fluxos
 *	Tipagem de Dados
@@ -14,17 +13,18 @@ Entre eles:
   * Path
   * Header
 * Validação de Métodos
-*	Estrutura da Resposta
+*	Estrutura da Resposta (Contrato)
 * Código dos estados HTTP
+
+Durante a criação do projeto também utilizei o POSTMAN como ponto de partida para testar manualmente e verificar os cenários que eu planejei estavam aderentes e também para descobrir como a API se comportava em algumas situações.
 
 # Para rodar os testes
 
-* Dê um fork neste projeto da <a href="https://github.com/MKappo/Brasilprev-qa-test-master">API</a>
-* Instale as dependências 
+* Dê um fork neste projeto da <a href="https://github.com/MKappo/Brasilprev-qa-test-master">API</a> 
+* Executar o projeto 
 ```shell
 mvn clean install
 ```
-* Executar o projeto 
 ```shell
 mvn spring-boot:run
 ```
